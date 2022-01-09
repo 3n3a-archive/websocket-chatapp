@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="chat-container">
+        <h1>Username: <span id="username"></span></h1>
+        <ul id="messages" class="msg-container"></ul>
+        <form id="form" action="">
+        <input id="input" autocomplete="off" />
+        <button>Send</button>
+    </form>
+    </div>
+    <script src="socket.js"></script>
+    <script src="store.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>

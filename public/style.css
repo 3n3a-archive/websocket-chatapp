@@ -1,0 +1,132 @@
+:root {
+  --send-bg: #0b93f6;
+  --send-color: white;
+  --receive-bg: #e5e5ea;
+  --receive-text: black;
+  --page-background: white;
+}
+body {
+  margin: 0;
+  padding-bottom: 3rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+h1 {
+  padding-left: 0.5em;
+}
+
+#form {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.25rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 3rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+}
+
+#input {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  margin: 0.25rem;
+}
+#input:focus {
+  outline: none;
+}
+#form > button {
+  background: #333;
+  border: none;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  border-radius: 10px;
+  outline: none;
+  color: #fff;
+}
+#form > button:hover {
+  background: rgb(93, 93, 93);
+}
+
+.chat-container {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.msg-container {
+  margin-block: 0;
+  padding-inline: 0;
+  margin: 0.5em 2em;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--page-background);
+  list-style: none;
+}
+
+.message {
+  display: grid;
+  grid-template-rows: 20px auto;
+  max-width: 50%;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  line-height: 24px;
+  position: relative;
+  padding: 2px 20px 10px 20px;
+  border-radius: 25px;
+}
+
+.message:before,
+.message:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+}
+
+.send {
+  padding-top: 5px;
+  color: var(--send-color);
+  background: var(--send-bg);
+  align-self: flex-end;
+}
+
+.send:before {
+  right: -8px;
+  width: 20px;
+  background-color: var(--send-bg);
+  border-bottom-left-radius: 16px 14px;
+}
+
+.send:after {
+  right: -25px;
+  width: 26px;
+  background-color: var(--page-background);
+  border-bottom-left-radius: 10px;
+}
+.receive {
+  background: var(--receive-bg);
+  color: black;
+  align-self: flex-start;
+}
+.receive:before {
+  left: -7px;
+  width: 20px;
+  background-color: var(--receive-bg);
+  border-bottom-right-radius: 16px 14px;
+}
+.receive:after {
+  left: -26px;
+  width: 26px;
+  background-color: var(--page-background);
+  border-bottom-right-radius: 10px;
+}
+
+.below {
+  font-size: 0.75rem;
+  max-width: 75%;
+  overflow: hidden;
+}
